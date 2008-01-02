@@ -12,6 +12,7 @@ Source0:	http://www.jumpbump.mine.nu/port/%{name}-%{version}.tar.bz2
 Source1:	%{name}-icons.tar.bz2
 Source2:	jumpnbump-1.41-man-pages.tar.bz2
 URL:		http://www.jumpbump.mine.nu/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	libSDL_mixer-devel libSDL_net-devel
 
 %description
