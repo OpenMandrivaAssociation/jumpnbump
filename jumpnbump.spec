@@ -38,11 +38,6 @@ rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 # french man page
 install -D fr/jumpnbump.6 %buildroot%_mandir/fr/man6/jumpnbump.6
-install -d $RPM_BUILD_ROOT/%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT/%{_menudir}/%{name}
-?package(%{name}):command="%{_gamesbindir}/jumpnbump" \
-  needs="X11" section="More Applications/Games/Arcade" title="Jump 'n Bump" longtitle="Violent game with cute little bunnies" icon="%{name}.png" xdg="true"
-EOF
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -79,7 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man6/%name.6*
 %lang(fr) %{_mandir}/fr/man6/%name.6*
 %_datadir/applications/mandriva*
-%{_menudir}/%{name}
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
