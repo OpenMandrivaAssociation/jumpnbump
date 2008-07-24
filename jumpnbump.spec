@@ -1,6 +1,6 @@
 %define name	jumpnbump  
 %define version 1.55
-%define release %mkrel 3
+%define release %mkrel 5
 
 Summary:	Cute little Bunny Game
 Name:		%{name}
