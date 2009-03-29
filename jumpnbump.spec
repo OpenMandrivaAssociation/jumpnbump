@@ -2,7 +2,7 @@
 %define version 1.55
 %define release %mkrel 5
 
-Summary:	Cute little Bunny Game
+Summary:	Cute little Bunny Game ( with bloody gore details )
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
@@ -11,13 +11,15 @@ Group:		Games/Arcade
 Source0:	http://www.jumpbump.mine.nu/port/%{name}-%{version}.tar.bz2
 Source1:	%{name}-icons.tar.bz2
 Source2:	jumpnbump-1.41-man-pages.tar.bz2
+Patch0:     jumpnbump-1.50-format_string.patch
 URL:		http://www.jumpbump.mine.nu/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	libSDL_mixer-devel libSDL_net-devel
 
 %description
-Jump n bump is a game for the whole family. You are cute fluffy little
-bunnies and hop on the other bunnies' heads.
+Jump n bump is a game for almost the whole family. You are cute fluffy little
+bunnies and hop on the other bunnies' heads, to make each others explode
+with realistic bunny blood.
 
 To play the game:
 - Jiffy plays with the arrow keys
@@ -28,6 +30,7 @@ To play the game:
 %prep
 %setup -q -a 2 -n %name-1.50
 perl -pi -e 's!PREFIX\"/share/jumpnbump/jumpbump.dat!\"%{_gamesdatadir}/%{name}/jumpbump.dat!g' globals.h
+%patch0 -p0
 
 %build
 %configure2_5x --bindir=%_gamesbindir --datadir=%_gamesdatadir
