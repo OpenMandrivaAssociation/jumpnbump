@@ -1,6 +1,6 @@
 %define name	jumpnbump  
 %define version 1.55
-%define release %mkrel 6
+%define release %mkrel 5
 
 Summary:	Cute little Bunny Game ( with bloody gore details )
 Name:		%{name}
@@ -85,4 +85,53 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 
+
+
+
+%changelog
+* Sun Mar 29 2009 Michael Scherer <misc@mandriva.org> 1.55-5mdv2009.1
++ Revision: 362114
+- add some warning about the bloody part of the game, asked by stormi
+- add patch to make it compile again
+
+* Fri Jul 25 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.55-5mdv2009.0
++ Revision: 247427
+- rebuild
+- drop old menu
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 1.55-3mdv2008.1
++ Revision: 140829
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+    - kill desktop-file-validate's 'warning: key "Encoding" in group "Desktop Entry" is deprecated'
+
+
+* Tue Jan 02 2007 Olivier Blin <oblin@mandriva.com> 1.55-3mdv2007.0
++ Revision: 103137
+- move jumpnbump in contrib
+- Import jumpnbump
+
+* Wed Aug 02 2006 Götz Waschk <goetz@zarb.org> 1.55-2plf2007.0
+- xdg menu
+
+* Tue Apr 25 2006 Götz Waschk <goetz@zarb.org> 1.55-1plf
+- fix build
+- drop patches
+- New release 1.55
+
+* Tue Sep 21 2004 Götz Waschk <goetz@zarb.org> 1.50-2plf
+- fix invalid distribution
+
+* Thu Jun 17 2004 Götz Waschk <goetz@plf.zarb.org> 1.50-1plf
+- add source URL
+- New release 1.50
+
+* Wed May 12 2004 Götz Waschk <goetz@plf.zarb.org> 1.41-3plf
+- rebuild to fix menu section
+- fix description
 
