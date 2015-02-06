@@ -1,6 +1,6 @@
 %define name	jumpnbump  
 %define version 1.55
-%define release %mkrel 5
+%define release 6
 
 Summary:	Cute little Bunny Game ( with bloody gore details )
 Name:		%{name}
