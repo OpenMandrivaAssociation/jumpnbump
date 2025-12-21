@@ -14,6 +14,11 @@ Source2:	jumpnbump-1.41-man-pages.tar.bz2
 Patch0:     jumpnbump-1.50-format_string.patch
 URL:		https://www.jumpbump.mine.nu/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libSDL_mixer-devel libSDL_net-devel
 
 %description
